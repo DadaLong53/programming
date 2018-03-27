@@ -1,0 +1,111 @@
+
+https://github.com/kaochenlong/learn-ruby-on-rails/blob/master/markdown/chapter01-ecosystem-and-introduction.md
+
+什麼是 Ruby？
+很多人因為聽聞 Rails 可以快速開發網站而開始知道有 Ruby 這個程式語言，所以會認為 Ruby 就是用來開發網站，或是以為 Ruby 是個最近幾年才發明的程式語言。
+事實上 Ruby 是一種泛用的腳本式程式語言，從資料分析、繪圖、3D 建模、系統管理、遊戲開發等程式都可以使用 Ruby 來開發，而且它的年紀已經超過 20 年了。
+
+Ruby 是由一位名叫松本行弘的日本人所發明（日文：まつもとゆきひろ，網路上大家通常稱他 Matz）。Ruby 參考了 Perl、Lisp 及 Smalltalk 等程式語言的設計，
+是一款物件化非常徹底的程式語言。在 1995 年釋出了第一個版本，在早期實際使用 Ruby 在工作上的開發者並不多，相關的技術文件也大多是日文居多，
+直到 Rails 開始風行之後，才慢慢的有越來越多人關注它。
+
+為什麼選擇 Ruby
+引用一句已故大師 Alan Perlis 的話：
+
+"A language that doesn't affect the way you think about programming is not worth knowing" — Alan Perlis
+「如果某種程式語言不會影響你寫程式的思考方式的話，那就不值得去學習它。」
+
+Ruby 是個很容易學、很容易上手的程式語言，語法寫起來也很自然、有趣，也因為 Ruby 的自然語法，寫久了真的會影響你在寫程式時候的思考或設計方式。
+
+因為 Ruby 的語法寫起來很自然，所以用 Ruby 寫出來的程式碼的可閱讀性也相當高。不管是接手別人的專案，或是維護自己幾個月前寫的系統，
+比較好的程式碼可讀性對開發者來說可以減少不少負擔。
+
+另外，現在全世界的 Ruby 社群都相當活躍，要找什麼套件幾乎都有熱心人士幫忙寫好了。除了可以免費取得之外，連原始程式碼都公開給你看。
+在台灣，Ruby 社群也是十分活躍，每個月甚至每週都有實體的線下聚會，也有大型的國際程式研討會 RubyConf Taiwan，
+每年都有不少國內外的 Ruby 開發者前來與會，連 Ruby 的發明人松本行弘也會遠從日本來台灣參加。
+
+
+什麼是 Rails？
+Rails 是一款使用 Ruby 程式語言所開發出來的網站開發框架（Web Framework），作者是名為 David Heinemeier Hansson（簡稱 DHH） 的丹麥人。
+當年他在開發自家的產品的同時，發現好像可以把一些網站開發常用的模組或函式庫組成一個框架，利用這個框架可以大大的縮短網站應用程式開發的時間。
+DHH 在 2005 年年底釋出第一個版本，並在研討會現場展示如何使用 Rails 在 15 分鐘內開發出一個 Blog，讓所有的人眼睛為之一亮，
+在那之後 Rails 便慢慢的風行到全世界，現在世面上常見的網頁開發框架的設計，多少也直接或間接的受了 Rails 的影響。
+
+一開始的時候大家會把 Ruby on Rails 簡稱為「RoR」，不過因為「RoR」實在不好發音，後來大家開始慢慢的改稱之 Rails，包括本書也是。
+
+====================================================================================
+[1]RUBY
+
+RUBY@LINUX
+ Ubuntu ：  $ sudo apt-get install ruby
+ CentOS  :  $ sudo yum install ruby
+
+RUBY@WINDOWS
+https://rubyinstaller.org/
+http://railsinstaller.org/en
+
+線上平台
+Try Ruby 網站:: http://tryruby.org/levels/1/challenges/0
+AWS Cloud9::  https://aws.amazon.com/tw/cloud9/?origin=c9io
+
+[2]用 RVM 來管理 Ruby 版本
+Ruby 有許多的版本（1.8/1.9/2.0/2.1/2.2/2.3/2.4）以及
+眾多的分支實作品（例如 JRuby/IronRuby/Rubinius/Macruby/mruby 等）
+
+Ruby Version Manager (RVM)
+RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments 
+from interpreters to sets of gems.
+
+Install RVM:
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+curl -sSL https://get.rvm.io | bash -s stable
+
+For all in one installation append  --rails or  --ruby or  --ruby=1.9.3
+有 RVM 的幫忙，你可以安心的在你的電腦裡同時安裝多個不同版本的 Ruby/Rails 而不會搞混，隨時都可以輕鬆的切換。
+
+RVM 是把程式安裝在你的的個人帳號目錄下，不需要的時候就整個 ~/.rvm 資料夾刪除就行了，不會影響原來系統的設定。
+也就是因為 RVM 是安裝在你的個人帳號底下，所以你在安裝過程中不需要管理者（root）的權限就可以安裝其它相關的套件。
+
+使用 RVM:: RVM 常用的指令。
+ 
+ 在終端機下輸入 rvm list known 會列出目前有哪些可以安裝的列表：
+$ rvm list known
+
+rvm install 2.3
+RVM 會自動找 [ruby-]2.4[.0] 這個版本的 Ruby 來安裝。
+
+如果你喜歡，也可以再裝個 1.9.3 的版本：$ rvm install 1.9.3
+
+查看目前電腦裡已經安裝哪些版本的 Ruby： $ rvm list
+
+看看目前 Ruby 的版本：
+
+$ ruby -v
+ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-darwin15]
+
+
+想要切換到 1.9.3 版本： $ rvm use 1.9.3
+
+$ rvm 1.9.3    --->use 也可以省略：
+
+https://github.com/kaochenlong/learn-ruby-on-rails/blob/master/markdown/chapter02-environment-setup.md
+
+[3]安裝 Rails
+在 Ruby 的世界有許多功能強大又可免費取用的套件，我們稱它叫 gem。
+Ruby on Rails 這個網站開發框架本身也是一個 gem（更準確的說，應該是一群 gem 的集合體），
+
+安裝 rails: $ gem install rails
+
+確認一下是不是安裝了正確的版本： $ rails -v
+
+建立第一個 Rails 專案:hello_rails 
+
+建立新專案用的是 new 這個參數： $ rails new hello_rails
+
+===>產生了一個名為 hello_rails 的目錄
+===>cd 指令進到剛剛產生的這個目錄：$ cd hello_rails
+===>直接啟動 Rails 附的 web server： $ rails server
+===>打開瀏覽器，連上網址 http://localhost:3000/
+
+https://github.com/kaochenlong/learn-ruby-on-rails/blob/master/markdown/chapter04-your-first-rails-application.md
