@@ -1,4 +1,7 @@
-#
+#RailsGoat Project
+A vulnerable version of Rails that follows the OWASP Top 10 
+
+http://railsgoat.cktricky.com
 
 https://github.com/OWASP/railsgoat
 
