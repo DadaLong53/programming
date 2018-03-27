@@ -1,0 +1,18 @@
+【本書特色】
+★ 作者為台灣RoR先驅、數位時代Ruby on Rails程式開發工作營講師。 
+★ Ruby on Rails是近年來最熱門的語言，因為它是最強大、簡單、人性化的語言。
+★ 許多世界級平台Twitter、Groupon、Airbnb、Github、Hulu等等都是使用Ruby on Rails。
+★ 就算不會寫程式也可以！作者用最簡單的方式教你如何開發出一個專業級網站。
+★ 實際開發證實是學寫程式最快的方法(Show, not tell)。
+★ 你只會學到需要用到的知識，而不是讀死書。
+★ 開發時遇到問題，可以加入作者的臉書獲得解答。
+
+目錄
+Chapter 01 Ruby on Rails 介紹與五分鐘架站
+Chapter 02 Ruby 快速上手
+Chapter 03 模型(建立用戶、密碼)
+Chapter 04 檢視、控制器(用戶註冊、登入、登出)
+Chapter 05 用戶與貼文
+Chapter 06 關注用戶
+Chapter 07 Gems插件：資料分頁、搜尋、Ajax
+Chapter 08 除錯與測試
