@@ -1,0 +1,55 @@
+
+
+https://github.com/OWASP/railsgoat
+
+
+[1]Setup Ruby On Rails on Ubuntu 16.04 Xenial Xerus
+https://gorails.com/setup/ubuntu/16.04
+
+[2]After installing the above software, clone this repo:
+
+$ git clone git@github.com:OWASP/railsgoat.git
+
+NOTE: NOT NECESSARY IF YOU WANT TO WORK WITH RAILS 5. Otherwise, if you wish to use the Rails 3 or 4 versions, you'll need to switch branches:
+
+$ cd railsgoat
+$ git checkout rails_3_2
+$ git checkout rails_4_2
+
+Navigate into the directory (already there if you followed the previous step) and install the dependencies:
+
+$ bundle install
+
+If you receive an error, make sure you have bundler installed:
+
+$ gem install bundler
+
+Initialize the database:
+
+$ rails db:setup
+
+Start the Thin web server:
+
+$ rails server
+
+Open your favorite browser, navigate to http://localhost:3000 and start hacking!
+
+
+===============================================================
+Docker Install
+To run Railsgoat with Docker you must first have Docker and Docker Compose installed. 
+Once those dependencies are installed, cd into the Railsgoat directory where you've cloned the code and run. 
+Rails requires Compose 1.6.0 or above and require a Docker Engine of version 1.10.0 or above.
+
+#~/code/railsgoat
+$ docker-compose build
+$ docker-compose run web rails db:setup
+$ docker-compose up
+...
+  Creating railsgoat_web_1
+  Attaching to railsgoat_web_1
+$
+Once you see the preceeding message Railsgoat is running on your localhost on port 3000.
+
+Open your favorite browser, navigate to http://<dockerIP>:3000 and start hacking! 
+The Docker IP is usually 192.168.99.100. Run docker-machine env to verify.
